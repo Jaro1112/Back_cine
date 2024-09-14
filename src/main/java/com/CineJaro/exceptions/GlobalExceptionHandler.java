@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> globalExceptionHandler(Exception ex) {
-        ex.printStackTrace(); // Esto imprimirá el stack trace en los logs
+        ex.printStackTrace();
         return new ResponseEntity<>("Ha ocurrido un error inesperado: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 

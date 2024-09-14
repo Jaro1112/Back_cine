@@ -14,7 +14,6 @@ public class Pelicula {
     private String pais;
     private String img;
 
-    // Getters y setters
     public Long getId() {
         return id;
     }
