@@ -20,7 +20,8 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> globalExceptionHandler(Exception ex) {
-        return new ResponseEntity<>("Ha ocurrido un error inesperado", HttpStatus.INTERNAL_SERVER_ERROR);
+        ex.printStackTrace(); // Esto imprimirá el stack trace en los logs
+        return new ResponseEntity<>("Ha ocurrido un error inesperado: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
