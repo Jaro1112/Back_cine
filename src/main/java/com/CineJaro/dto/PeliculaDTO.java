@@ -1,7 +1,7 @@
-package main.java.com.CineJaro.dto;
+package com.CineJaro.dto;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 public class PeliculaDTO {
     @NotBlank(message = "El nombre de la película es obligatorio")

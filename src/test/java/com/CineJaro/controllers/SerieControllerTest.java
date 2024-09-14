@@ -1,4 +1,4 @@
-package main.java.com.CineJaro.controllers;
+package com.CineJaro.controllers;
 
 import com.CineJaro.services.SerieService;
 import com.CineJaro.dto.SerieDTO;

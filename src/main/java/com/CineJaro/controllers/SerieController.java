@@ -1,4 +1,4 @@
-package main.java.com.CineJaro.controllers;
+package com.CineJaro.controllers;
 
 import com.CineJaro.models.Serie;
 import com.CineJaro.services.SerieService;
@@ -6,7 +6,7 @@ import com.CineJaro.dto.SerieDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 import java.util.List;
 

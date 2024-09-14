@@ -1,4 +1,4 @@
-package main.java.com.CineJaro.exceptions;
+package com.CineJaro.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

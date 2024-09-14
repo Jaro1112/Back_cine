@@ -1,6 +1,6 @@
-package main.java.com.CineJaro.models;
+package com.CineJaro.models;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 public class Pelicula {
@@ -15,4 +15,59 @@ public class Pelicula {
     private String img;
 
     // Getters y setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombrePelicula() {
+        return nombrePelicula;
+    }
+
+    public void setNombrePelicula(String nombrePelicula) {
+        this.nombrePelicula = nombrePelicula;
+    }
+
+    public String getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(String duracion) {
+        this.duracion = duracion;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getFechaEstreno() {
+        return fechaEstreno;
+    }
+
+    public void setFechaEstreno(String fechaEstreno) {
+        this.fechaEstreno = fechaEstreno;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
 }

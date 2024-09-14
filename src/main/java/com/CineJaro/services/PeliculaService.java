@@ -1,11 +1,13 @@
-package main.java.com.CineJaro.services;
+package com.CineJaro.services;
 
-import com.mycineavg.models.Pelicula;
-import com.mycineavg.repositories.PeliculaRepository;
+import com.CineJaro.models.Pelicula;
+import com.CineJaro.repositories.PeliculaRepository;
+import com.CineJaro.dto.PeliculaDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import com.CineJaro.exceptions.ResourceNotFoundException;
 
 @Service
 public class PeliculaService {

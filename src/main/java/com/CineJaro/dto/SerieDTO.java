@@ -1,7 +1,7 @@
-package main.java.com.CineJaro.dto;
+package com.CineJaro.dto;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 public class SerieDTO {
     @NotBlank(message = "El nombre de la serie es obligatorio")

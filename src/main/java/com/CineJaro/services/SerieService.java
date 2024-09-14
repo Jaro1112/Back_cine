@@ -1,7 +1,7 @@
-package main.java.com.CineJaro.services;
+package com.CineJaro.services;
 
-import com.mycineavg.models.Serie;
-import com.mycineavg.repositories.SerieRepository;
+import com.CineJaro.models.Serie;
+import com.CineJaro.repositories.SerieRepository;
 import com.CineJaro.dto.SerieDTO;
 import com.CineJaro.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

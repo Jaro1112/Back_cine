@@ -1,4 +1,4 @@
-package main.java.com.CineJaro.controllers;
+package com.CineJaro.controllers;
 
 import com.CineJaro.models.Pelicula;
 import com.CineJaro.services.PeliculaService;
@@ -6,6 +6,7 @@ import com.CineJaro.dto.PeliculaDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.List;
 
