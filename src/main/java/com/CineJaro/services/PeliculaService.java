@@ -15,7 +15,10 @@ public class PeliculaService {
     private PeliculaRepository peliculaRepository;
 
     public List<Pelicula> getAllPeliculas() {
-        return peliculaRepository.findAll();
+        System.out.println("Obteniendo todas las películas");
+        List<Pelicula> peliculas = peliculaRepository.findAll();
+        System.out.println("Número de películas obtenidas: " + peliculas.size());
+        return peliculas;
     }
     public Pelicula crearPelicula(PeliculaDTO peliculaDTO) {
         Pelicula pelicula = new Pelicula();
