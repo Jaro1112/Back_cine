@@ -1,5 +1,6 @@
 package com.CineJaro.services;
 
+import com.CineJaro.factories.PeliculaFactory;
 import com.CineJaro.models.Pelicula;
 import com.CineJaro.repositories.PeliculaRepository;
 import com.CineJaro.dto.PeliculaDTO;
@@ -15,6 +16,9 @@ import com.CineJaro.exceptions.ResourceNotFoundException;
 public class PeliculaService {
     @Autowired
     private PeliculaRepository peliculaRepository;
+    
+    @Autowired
+    private PeliculaFactory peliculaFactory;
 
     @Cacheable("peliculas")
     public List<Pelicula> getAllPeliculas() {
@@ -26,13 +30,7 @@ public class PeliculaService {
 
     @CacheEvict(value = "peliculas", allEntries = true)
     public Pelicula crearPelicula(PeliculaDTO peliculaDTO) {
-        Pelicula pelicula = new Pelicula();
-        pelicula.setNombrePelicula(peliculaDTO.getNombrePelicula());
-        pelicula.setDuracion(peliculaDTO.getDuracion());
-        pelicula.setGenero(peliculaDTO.getGenero());
-        pelicula.setFechaEstreno(peliculaDTO.getFechaEstreno());
-        pelicula.setPais(peliculaDTO.getPais());
-        pelicula.setImg(peliculaDTO.getImg());
+        Pelicula pelicula = peliculaFactory.crearContenido(peliculaDTO);
         return peliculaRepository.save(pelicula);
     }
 

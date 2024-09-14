@@ -1,5 +1,6 @@
 package com.CineJaro.services;
 
+import com.CineJaro.factories.SerieFactory;
 import com.CineJaro.models.Serie;
 import com.CineJaro.repositories.SerieRepository;
 import com.CineJaro.dto.SerieDTO;
@@ -14,18 +15,15 @@ public class SerieService {
     @Autowired
     private SerieRepository serieRepository;
 
+    @Autowired
+    private SerieFactory serieFactory;
+
     public List<Serie> getAllSeries() {
         return serieRepository.findAll();
     }
 
     public Serie crearSerie(SerieDTO serieDTO) {
-        Serie serie = new Serie();
-        serie.setNombreSerie(serieDTO.getNombreSerie());
-        serie.setDuracion(serieDTO.getDuracion());
-        serie.setGenero(serieDTO.getGenero());
-        serie.setFechaEstreno(serieDTO.getFechaEstreno());
-        serie.setPais(serieDTO.getPais());
-        serie.setImg(serieDTO.getImg());
+        Serie serie = serieFactory.crearContenido(serieDTO);
         return serieRepository.save(serie);
     }
 
