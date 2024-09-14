@@ -19,7 +19,7 @@ public class PeliculaController {
     @GetMapping
     public List<Pelicula> getAllPeliculas() {
         return peliculaService.getAllPeliculas();
-    }
+    }   
 
     @PostMapping("/crear-pelicula")
     public ResponseEntity<Pelicula> crearPelicula(@Valid @RequestBody PeliculaDTO peliculaDTO) {
